@@ -1,22 +1,22 @@
 {
-  "author": "WeAreAthlon <hello@weareathlon.com> (https://www.weareathlon.com)",
-  "name": "@weareathlon/frontend-webpack-boilerplate",
+  "author": "template",
+  "name": "template",
   "version": "5.13.0",
-  "description": "Starter project template boilerplate based on Webpack with SASS/PostCSS and babel ES6/7 support.",
-  "homepage": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate#readme",
+  "description": "template",
+  "homepage": "https://github.com/yaroslavvertukhov/frontend-webpack-boilerplate#readme",
   "browserslist": [
     "last 2 versions",
     "> 5%"
   ],
   "bugs": {
-    "url": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues",
-    "email": "plamen@athlonsofia.com"
+    "url": "https://github.com/yaroslavvertukhov/frontend-webpack-boilerplate/issues",
+    "email": "yaroslav-vertukhov@yandex.ru"
   },
   "contributors": [
     {
-      "name": "Plamen Nikolov",
-      "email": "me@pnikoloff.com",
-      "url": "https://pnikoloff.com"
+      "name": "Ярослав Вертухов",
+      "email": "yaroslav-vertukhov@yandex.ru",
+      "url": "https://github.com/yaroslavvertukhov/frontend-webpack-boilerplate"
     }
   ],
   "devDependencies": {
@@ -55,7 +55,7 @@
     "webpack-merge": "^5.8.0"
   },
   "engines": {
-    "node": "^12 || >=14"
+    "node": "16.15.0"
   },
   "keywords": [
     "webpack",
@@ -67,7 +67,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:WeAreAthlon/frontend-webpack-boilerplate.git"
+    "url": "git@github.com:yaroslavvertukhov/frontend-webpack-boilerplate.git"
   },
   "scripts": {
     "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
