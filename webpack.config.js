@@ -71,6 +71,18 @@ module.exports = {
           filename: 'images/design/[name].[hash:6][ext]',
         },
       },
+      {
+        test: /\.ejs$/,
+        use: {
+          loader: 'ejs-compiled-loader',
+          options: {
+            htmlmin: false,
+            htmlminOptions: {
+              removeComments: false,
+            },
+          },
+        },
+      },
     ],
   },
   optimization: {

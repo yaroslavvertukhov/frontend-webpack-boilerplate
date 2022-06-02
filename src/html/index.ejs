@@ -1,5 +1,22 @@
-<!-- TODO: Решить проблему с include. Сейчас не работает-->
+<%
+ const header = require('./layouts/default/header.ejs');
+ const footer = require('./layouts/default/footer.ejs');
 
-<%- include('layouts/default/header'); -%>
+ const list = ['Элемент 1', 'Элемент 2', 'Элемент 3'];
+%>
 
-<%- include('layouts/default/footer'); -%>
+<%- header({ content: 'Хедер' }) -%>
+
+<div>
+ Контент главной
+</div>
+
+<ul>
+ <% list.forEach(function(el){ %>
+  <li><%- el %></li>
+ <% }); %>
+</ul>
+
+<%- footer({ content: 'Футер' }) -%>
+
+
