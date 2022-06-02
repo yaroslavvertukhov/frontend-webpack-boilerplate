@@ -2,7 +2,23 @@
  const header = require('./layouts/default/header.ejs');
  const footer = require('./layouts/default/footer.ejs');
 
+ const News = require('./components/news/list.ejs');
+
  const list = ['Элемент 1', 'Элемент 2', 'Элемент 3'];
+ const newsList = [
+  {
+    title: 'Новость 1',
+    description: 'Описание 1',
+  },
+  {
+   title: 'Новость 2',
+   description: 'Описание 2',
+  },
+  {
+   title: 'Новость 3',
+   description: 'Описание 3',
+  }
+ ];
 %>
 
 <%- header({ content: 'Хедер' }) -%>
@@ -15,6 +31,7 @@
  <% list.forEach(function(el){ %>
   <li><%- el %></li>
  <% }); %>
+ <%- News({ news: newsList }) %>
 </ul>
 
 <%- footer({ content: 'Футер' }) -%>

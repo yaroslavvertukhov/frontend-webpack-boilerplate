@@ -1,0 +1,15 @@
+<%
+    const Button = require('../common/button.ejs');
+%>
+
+<div class="news-card">
+    <div class="news-card__title">
+        <%- title %>
+    </div>
+    <div class="news-card__description">
+        <%- description %>
+    </div>
+    <div class="news-card__footer">
+        <%- Button({ text: 'Подробнее' }) %>
+    </div>
+</div>
