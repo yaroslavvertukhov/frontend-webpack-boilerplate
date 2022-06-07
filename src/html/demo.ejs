@@ -26,17 +26,18 @@
 <main>
  <div class="container">
   <h1>
-   Инструкция по работе
+   Контент главной
   </h1>
 
   <h2>
-   1. Директории
+   Демо как работает вывод списка
   </h2>
   <ul>
-   <li>src/fonts - шрифты</li>
-   <li>src/html</li>
+   <% list.forEach(function(el){ %>
+    <li><%- el %></li>
+   <% }); %>
+   <%- News({ news: newsList }) %>
   </ul>
-
  </div>
 </main>
 

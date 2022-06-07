@@ -2,12 +2,15 @@
     const Card = require('./card.ejs');
 %>
 
-
-<% news.forEach((item) => { %>
-    <%-
-        Card({
-            title: item.title,
-            description: item.description
-        });
-    %>
-<% }); %>
+<div class="news-list">
+    <% news.forEach((item) => { %>
+        <div class="news-list__item">
+            <%-
+                Card({
+                    title: item.title,
+                    description: item.description
+                });
+            %>
+        </div>
+    <% }); %>
+</div>

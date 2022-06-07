@@ -1,5 +1,3 @@
-/* By Athlon Front-End Team */
-
 /* Core variables */
 @import 'base/vars';
 
@@ -18,9 +16,10 @@
 /* Vendor */
 
 /* Components */
+@import 'modules/common/global';
+@import 'modules/common/container';
+@import 'modules/news/list';
 
 /* Browser specific styles */
 @import 'dirty/hacks';
 
-/* Demo Page styles */
-@import 'demo';
