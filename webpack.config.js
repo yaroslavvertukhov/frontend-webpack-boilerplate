@@ -12,8 +12,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const environment = require('./configuration/environment');
 
-console.log(path.resolve(environment.paths.source, 'html'));
-
 const templateFiles = fs.readdirSync(path.resolve(environment.paths.source, 'html'))
   .filter((file) => ['.html', '.ejs'].includes(path.extname(file).toLowerCase())).map((filename) => ({
     input: filename,
@@ -40,24 +38,22 @@ module.exports = {
     rules: [
       {
         test: /\.((c|sa|sc)ss)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+            },
+          },
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
-      },
-      {
-        test: /\.(png|gif|jpe?g|svg)$/i,
-        type: 'asset',
-        parser: {
-          dataUrlCondition: {
-            maxSize: environment.limits.images,
-          },
-        },
-        generator: {
-          filename: 'images/design/[name].[hash:6][ext]',
-        },
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
@@ -68,7 +64,7 @@ module.exports = {
           },
         },
         generator: {
-          filename: 'images/design/[name].[hash:6][ext]',
+          filename: 'fonts/[name].[hash:6][ext]',
         },
       },
       {
@@ -135,8 +131,24 @@ module.exports = {
           },
         },
         {
+          from: path.resolve(environment.paths.source, 'images', 'design'),
+          to: path.resolve(environment.paths.output, 'images', 'design'),
+          toType: 'dir',
+          globOptions: {
+            ignore: ['*.DS_Store', 'Thumbs.db'],
+          },
+        },
+        {
           from: path.resolve(environment.paths.source, 'videos'),
           to: path.resolve(environment.paths.output, 'videos'),
+          toType: 'dir',
+          globOptions: {
+            ignore: ['*.DS_Store', 'Thumbs.db'],
+          },
+        },
+        {
+          from: path.resolve(environment.paths.source, 'docs'),
+          to: path.resolve(environment.paths.output, 'docs'),
           toType: 'dir',
           globOptions: {
             ignore: ['*.DS_Store', 'Thumbs.db'],

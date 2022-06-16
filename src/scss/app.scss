@@ -18,7 +18,11 @@
 /* Components */
 @import 'modules/common/global';
 @import 'modules/common/container';
-@import 'modules/news/list';
+@import 'modules/common/button';
+
+@import 'modules/demo/demo';
+@import 'modules/demo/list';
+@import 'modules/demo/card';
 
 /* Browser specific styles */
 @import 'dirty/hacks';

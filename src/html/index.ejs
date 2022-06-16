@@ -1,24 +1,6 @@
 <%
  const header = require('./layouts/default/header.ejs');
  const footer = require('./layouts/default/footer.ejs');
-
- const News = require('./components/news/list.ejs');
-
- const list = ['Элемент 1', 'Элемент 2', 'Элемент 3'];
- const newsList = [
-  {
-    title: 'Новость 1',
-    description: 'Описание 1',
-  },
-  {
-   title: 'Новость 2',
-   description: 'Описание 2',
-  },
-  {
-   title: 'Новость 3',
-   description: 'Описание 3',
-  }
- ];
 %>
 
 <%- header({ content: 'Хедер' }) -%>
@@ -29,38 +11,107 @@
    Инструкция по работе
   </h1>
 
-  <h2>
-   1. Директории
-  </h2>
-  <code>
-   src<br>
-   ├───fonts - шрифты<br>
-   ├───html<br>
-   │   ├───components - компонеты верстки<br>
-   │   │   ├───common - общие компоненты верстки<br>
-   │   │   └───news - пример компонетов страниц новостей<br>
-   │   └───layouts - лояуты верстки (header, footer)<br>
-   │       └───default - пример лояута<br>
-   ├───images - изображения<br>
-   │   ├───content - изображения контентные (баннеры, фото в новостях и тд)<br>
-   │   └───design - изображения дизайнерские (иконки, элементы дизайна)<br>
-   ├───js - js файлы<br>
-   │   └───modules - здесь лежат js модули<br>
-   │   └───app.js - файл поодключения js модулей<br>
-   ├───scss - scss файлы стилей<br>
-   │   ├───base - базовые файлы стилей<br>
-   │   │   ├───_fonts.scss - подключение шрифтов<br>
-   │   │   ├───_mixins.scss - миксины<br>
-   │   │   ├───_print.scss - стили печати<br>
-   │   │   ├───_reset.scss - сброс стандартных файлов<br>
-   │   │   └───_vars.scss - переменные<br>
+  <section>
+   <h2>
+    1.1 Технологии
+   </h2>
+
+   <h3>
+    Препроцессоры
+   </h3>
+   <ul>
+    <li>Стили - <a href="https://sass-scss.ru/" target="_blank">Scss/Sass</a></li>
+    <li>Верстка - <a href="https://ejs.co/" target="_blank">EJS</a></li>
+   </ul>
+  </section>
+
+  <section>
+   <h2>
+    2. Директории
+   </h2>
+   <code>
+    src<br>
+    <span class="code-font">
+   ├───fonts - Файлы шрифтов<br>
+   </span>
+    <span class="code-html">
+   ├───html - Верстка<br>
+   │   ├───components - Компонеты верстки<br>
+   │   │   ├───common - Общие компоненты верстки<br>
+   │   │   └───demo - Пример компонетов страницы demo<br>
+   │   └───layouts - Лояуты верстки (header, footer)<br>
+   │   │   └───default - Пример лояута<br>
+   │   ├───index.ejs - Пример главной страницы<br>
+   │   └───demo.ejs - Пример demo страницы<br>
+   </span>
+    <span class="code-img">
+   ├───images - Изображения<br>
+   │   ├───content - Контентные изображения (баннеры, фото в новостях и тд)<br>
+   │   └───design - Дизайнерские изображения (иконки, элементы дизайна)<br>
+   </span>
+    <span class="code-js">
+   ├───js - Скрипты<br>
+   │   └───modules - JS модули<br>
+   │   └───app.js - Файл подключения js модулей<br>
+   </span>
+    <span class="code-css">
+   ├───scss - Стили<br>
+   │   ├───base - Базовые файлы стилей<br>
+   │   │   ├───_fonts.scss - Подключение шрифтов<br>
+   │   │   ├───_mixins.scss - Миксины<br>
+   │   │   ├───_print.scss - Стили печати<br>
+   │   │   ├───_reset.scss - Сброс стандартных файлов<br>
+   │   │   └───_vars.scss - Переменные<br>
    │   ├───dirty - Хаки для старых браузеров<br>
-   │   └───modules - модули стилей<br>
-   │   │   ├───common - общие модули стилей<br>
-   │   │   └───news - пример модулей стилей страниц новостей<br>
-   │   └───app.scss - файл поодключения scss модулей<br>
-   └───videos - видео файлы<br>
-  </code>
+   │   └───modules - Модули стилей<br>
+   │   │   ├───common - Общие модули стилей<br>
+   │   │   └───demo - Пример модулей стилей страницы demo<br>
+   │   └───app.scss - Файл поодключения scss модулей<br>
+    </span>
+    └───videos - Видео файлы<br>
+    └───docs - Документы<br>
+   </code>
+  </section>
+
+  <section>
+   <h2>
+    3. Иминование файлов, папок, переменных и классов
+   </h2>
+
+   <ul>
+    <li>Файлы и папки именуются стилем kebab-case</li>
+    <li>Переменные именуются стилем camelCase</li>
+    <li>Классы именуются стилем PascalCase</li>
+   </ul>
+
+  </section>
+  <section>
+   <h2>
+    4. Настройка IDE
+   </h2>
+
+   <h3>
+    2.1 WebStorm
+   </h3>
+   <h4>
+    2.1.1 ESlint
+   </h4>
+   <ul>
+    <li>Перейдите в настройки: <b>ESlint в File > Settings > Languages & Frameworks > JavaScript > Code Quality Tools > ESLint</b></li>
+    <li>Установите переключатель в <b>Automatic ESlint configuration</b></li>
+   </ul>
+   <h4>
+    2.1.1 <s>SCSS-lint</s> Под вопросом. Может стоит заменить на Stylelint + Prettier
+   </h4>
+   <s>
+    <ul>
+     <li>Перейдите в настройки: <b>File > Settings > Plugins</b></li>
+     <li>Установите установить плагин через маркетплейс <b>SCSS-lint</b></li>
+     <li>Перейдите в настройки плагина <b>SCSS-lint: File > Settings > SCSS Lint</b></li>
+    </ul>
+    </s>
+   <img src="/images/design/heading.png" alt="">
+  </section>
  </div>
 </main>
 

@@ -134,12 +134,27 @@ blockquote {
 }
 
 code {
-  font-family: Consolas, 'courier new';
   color: $link-color;
   background-color: $light-gray;
   padding: 2px;
   font-size: 1em;
   border-radius: 3px;
+  font-family: serif;
+  .code-font {
+    color: #1f25ec;
+  }
+  .code-html {
+    color: #1ba311;
+  }
+  .code-img {
+    color: #ec1f1f;
+  }
+  .code-js {
+    color: #ec7b1f;
+  }
+  .code-css {
+    color: #04a2b1;
+  }
 }
 
 footer {

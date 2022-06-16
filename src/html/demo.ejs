@@ -2,7 +2,7 @@
  const header = require('./layouts/default/header.ejs');
  const footer = require('./layouts/default/footer.ejs');
 
- const News = require('./components/news/list.ejs');
+ const DemoNews = require('./components/demo/list.ejs');
 
  const list = ['Элемент 1', 'Элемент 2', 'Элемент 3'];
  const newsList = [
@@ -36,7 +36,7 @@
    <% list.forEach(function(el){ %>
     <li><%- el %></li>
    <% }); %>
-   <%- News({ news: newsList }) %>
+   <%- DemoNews({ news: newsList }) %>
   </ul>
  </div>
 </main>
