@@ -82,7 +82,7 @@
     "bundle": "yarn install && yarn watch",
     "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
     "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
-    "lint:scss": "stylelint \"**/*.{css,scss,sass,vue}\"",
+    "lint:scss": "stylelint \"src/scss/**/*.{css,scss,sass,vue}\"",
     "lint:js": "eslint --ext .js src/js/",
     "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
   },
