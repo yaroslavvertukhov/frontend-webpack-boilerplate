@@ -1,40 +1,40 @@
 <%
- const header = require('./layouts/default/header.ejs');
- const footer = require('./layouts/default/footer.ejs');
+const header = require('./layouts/default/header.ejs');
+const footer = require('./layouts/default/footer.ejs');
 %>
 
-<%- header({ content: 'Хедер' }) -%>
+<%- header({content: 'Хедер'}) -%>
 
 <main>
- <div class="container">
-  <h1>
-   Инструкция по работе
-  </h1>
+    <div class="container">
+        <h1>
+            Инструкция по работе
+        </h1>
 
-  <section>
-   <h2>
-    1.1 Технологии
-   </h2>
+        <section>
+            <h2>
+                1.1 Технологии
+            </h2>
 
-   <h3>
-    Препроцессоры
-   </h3>
-   <ul>
-    <li>Стили - <a href="https://sass-scss.ru/" target="_blank">Scss/Sass</a></li>
-    <li>Верстка - <a href="https://ejs.co/" target="_blank">EJS</a></li>
-   </ul>
-  </section>
+            <h3>
+                Препроцессоры
+            </h3>
+            <ul>
+                <li>Стили - <a href="https://sass-scss.ru/" target="_blank">Scss/Sass</a></li>
+                <li>Верстка - <a href="https://ejs.co/" target="_blank">EJS</a></li>
+            </ul>
+        </section>
 
-  <section>
-   <h2>
-    2. Директории
-   </h2>
-   <code>
-    src<br>
-    <span class="code-font">
+        <section>
+            <h2>
+                2. Директории
+            </h2>
+            <code>
+                src<br>
+                <span class="code-font">
    ├───fonts - Файлы шрифтов<br>
    </span>
-    <span class="code-html">
+                <span class="code-html">
    ├───html - Верстка<br>
    │   ├───components - Компонеты верстки<br>
    │   │   ├───common - Общие компоненты верстки<br>
@@ -44,17 +44,17 @@
    │   ├───index.ejs - Пример главной страницы<br>
    │   └───demo.ejs - Пример demo страницы<br>
    </span>
-    <span class="code-img">
+                <span class="code-img">
    ├───images - Изображения<br>
    │   ├───content - Контентные изображения (баннеры, фото в новостях и тд)<br>
    │   └───design - Дизайнерские изображения (иконки, элементы дизайна)<br>
    </span>
-    <span class="code-js">
+                <span class="code-js">
    ├───js - Скрипты<br>
    │   └───modules - JS модули<br>
    │   └───app.js - Файл подключения js модулей<br>
    </span>
-    <span class="code-css">
+                <span class="code-css">
    ├───scss - Стили<br>
    │   ├───base - Базовые файлы стилей<br>
    │   │   ├───_fonts.scss - Подключение шрифтов<br>
@@ -68,52 +68,74 @@
    │   │   └───demo - Пример модулей стилей страницы demo<br>
    │   └───app.scss - Файл поодключения scss модулей<br>
     </span>
-    └───videos - Видео файлы<br>
-    └───docs - Документы<br>
-   </code>
-  </section>
+                └───videos - Видео файлы<br>
+                └───docs - Документы<br>
+            </code>
+        </section>
 
-  <section>
-   <h2>
-    3. Иминование файлов, папок, переменных и классов
-   </h2>
+        <section>
+            <h2>
+                3. Иминование файлов, папок, переменных и классов
+            </h2>
 
-   <ul>
-    <li>Файлы и папки именуются стилем kebab-case</li>
-    <li>Переменные именуются стилем camelCase</li>
-    <li>Классы именуются стилем PascalCase</li>
-   </ul>
+            <ul>
+                <li>Файлы и папки именуются стилем kebab-case</li>
+                <li>Переменные именуются стилем camelCase</li>
+                <li>Классы именуются стилем PascalCase</li>
+            </ul>
 
-  </section>
-  <section>
-   <h2>
-    4. Настройка IDE
-   </h2>
+        </section>
+        <section>
+            <h2>
+                4. Настройка IDE
+            </h2>
 
-   <h3>
-    2.1 WebStorm
-   </h3>
-   <h4>
-    2.1.1 ESlint
-   </h4>
-   <ul>
-    <li>Перейдите в настройки: <b>ESlint в File > Settings > Languages & Frameworks > JavaScript > Code Quality Tools > ESLint</b></li>
-    <li>Установите переключатель в <b>Automatic ESlint configuration</b></li>
-   </ul>
-   <h4>
-    2.1.1 <s>SCSS-lint</s> Под вопросом. Может стоит заменить на Stylelint + Prettier
-   </h4>
-   <s>
-    <ul>
-     <li>Перейдите в настройки: <b>File > Settings > Plugins</b></li>
-     <li>Установите установить плагин через маркетплейс <b>SCSS-lint</b></li>
-     <li>Перейдите в настройки плагина <b>SCSS-lint: File > Settings > SCSS Lint</b></li>
-    </ul>
-    </s>
-  </section>
- </div>
+            <h3>
+                2.1 WebStorm
+            </h3>
+            <h4>
+                2.1.1 Prettier
+            </h4>
+            <ul>
+                <li>Перейдите в настройки: <b>File > Settings > Languages & Frameworks > JavaScript > Prettier</b></li>
+                <li>В select <b>Prettier package</b> выберете <b>&lt;корень проекта&gt;\node_modules\prettier</b></li>
+                <li>В input <b>Run to files</b> впишите <b>{**/*,*}.{js,ts,jsx,tsx,html,vue,scss}</b></li>
+                <li>Перейдите в настройки: <b>File > Settings > Keymap</b></li>
+                <li>Перейдите по вложенности папок раздела Keymap: <b>Plugins > JavaScript and TypeScript > Fix ESlint
+                        Problems</b></li>
+                <li>Добавьте свою комбинацию клавиш для форматирования отступов всех файлов файлов</li>
+            </ul>
+            <h4>
+                2.1.2 ESlint + Prettier
+            </h4>
+            <ul>
+                <li>Перейдите в настройки: <b>ESlint в File > Settings > Languages & Frameworks > JavaScript > Code
+                        Quality Tools > ESLint</b></li>
+                <li>Установите переключатель в <b>Automatic ESlint configuration</b></li>
+                <li>Перейдите в настройки: <b>File > Settings > Keymap</b></li>
+                <li>Перейдите по вложенности папок раздела Keymap: <b>Plugins > JavaScript and TypeScript > Fix ESlint
+                        Problems</b></li>
+                <li>Добавьте свою комбинацию клавиш для проверки линтером и форматирования JS файлов</li>
+            </ul>
+            <h4>
+                2.1.3 Stylelint + Prettier
+            </h4>
+            <ul>
+                <li>Перейдите в настройки: <b>File > Settings > Languages & Frameworks > Style Sheets > Stylelint</b>
+                </li>
+                <li>В select <b>Stylelint package</b> выберете <b>&lt;корень проекта&gt;\node_modules\stylelint</b></li>
+                <li>В input <b>Configuration file</b> впишите <b>&lt;корень проекта&gt;\node_modules\.stylelintrc</b>
+                </li>
+                <li>В input <b>Run to files</b> впишите <b>{**/*,*}.{css,scss,sass}</b></li>
+                <li>Перейдите в настройки: <b>File > Settings > Keymap</b></li>
+                <li>Перейдите по вложенности папок раздела Keymap: <b>Plugins > JavaScript and TypeScript > Fix
+                        Stylelint Problems</b></li>
+                <li>Добавьте свою комбинацию клавиш для проверки линтером и форматирования стилевых файлов</li>
+            </ul>
+        </section>
+    </div>
 </main>
 
-<%- footer({ content: 'Футер' }) -%>
+<%- footer({content: 'Футер'}) -%>
 
 

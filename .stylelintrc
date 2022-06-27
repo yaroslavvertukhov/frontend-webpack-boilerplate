@@ -3,7 +3,9 @@
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss"
   ],
-  "plugins": ["stylelint-prettier"],
+  "plugins": [
+    "stylelint-prettier"
+  ],
   "rules": {
     "prettier/prettier": true
   }
