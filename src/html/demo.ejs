@@ -1,46 +1,46 @@
 <%
- const header = require('./layouts/default/header.ejs');
- const footer = require('./layouts/default/footer.ejs');
+const header = require('./layouts/default/header.ejs');
+const footer = require('./layouts/default/footer.ejs');
 
- const DemoNews = require('./components/demo/list.ejs');
+const DemoNews = require('./components/demo/list.ejs');
 
- const list = ['Элемент 1', 'Элемент 2', 'Элемент 3'];
- const newsList = [
-  {
-    title: 'Новость 1',
-    description: 'Описание 1',
-  },
-  {
-   title: 'Новость 2',
-   description: 'Описание 2',
-  },
-  {
-   title: 'Новость 3',
-   description: 'Описание 3',
-  }
- ];
+const list = ['Элемент 1', 'Элемент 2', 'Элемент 3'];
+const newsList = [
+    {
+        title: 'Новость 1',
+        description: 'Описание 1',
+    },
+    {
+        title: 'Новость 2',
+        description: 'Описание 2',
+    },
+    {
+        title: 'Новость 3',
+        description: 'Описание 3',
+    }
+];
 %>
 
-<%- header({ content: 'Хедер' }) -%>
+<%- header({content: 'Хедер'}) -%>
 
 <main>
- <div class="container">
-  <h1>
-   Контент главной
-  </h1>
+    <div class="container">
+        <h1>
+            Контент главной
+        </h1>
 
-  <h2>
-   Демо как работает вывод списка
-  </h2>
-  <ul>
-   <% list.forEach(function(el){ %>
-    <li><%- el %></li>
-   <% }); %>
-   <%- DemoNews({ news: newsList }) %>
-  </ul>
- </div>
+        <h2>
+            Демо как работает вывод списка
+        </h2>
+        <ul>
+            <% list.forEach(function(el){ %>
+                <li><%- el %></li>
+            <% }); %>
+            <%- DemoNews({news: newsList}) %>
+        </ul>
+    </div>
 </main>
 
-<%- footer({ content: 'Футер' }) -%>
+<%- footer({content: 'Футер'}) -%>
 
 

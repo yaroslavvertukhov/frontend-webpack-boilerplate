@@ -1,0 +1,12 @@
+.news-list {
+	$gap: 15;
+
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -#{$gap}px;
+
+	&__item {
+		width: 33.33%;
+		padding: 0 #{$gap}px;
+	}
+}
